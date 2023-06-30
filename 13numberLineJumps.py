@@ -19,7 +19,7 @@ import sys
 
 
 def kangaroo(x1, v1, x2, v2):
-    if v1 == v2:  # Kangaroos have the same velocity, they can't meet
+    if v1 == v2 and x1 != x2 :  # Kangaroos have the same velocity, they can't meet
         return "NO"
 
     # Calculate the number of jumps required for the kangaroos to meet
