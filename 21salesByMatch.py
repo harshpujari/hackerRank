@@ -5,6 +5,7 @@ import os
 import random
 import re
 import sys
+from collections import Counter
 
 #
 # Complete the 'sockMerchant' function below.
@@ -16,15 +17,7 @@ import sys
 #
 
 def sockMerchant(n, ar):
-    color_counts = {}  # A dictionary to store the color counts
-    
-    # Count the occurrences of each color
-    for color in ar:
-        if color in color_counts:
-            color_counts[color] += 1
-        else:
-            color_counts[color] = 1
-    
+    color_counts = Counter(ar)
     # Calculate the number of pairs
     pairs = 0
     for count in color_counts.values():
